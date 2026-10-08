@@ -10,7 +10,7 @@ Professor Adalberto Lazarini — 8 de outubro de 2026
 <!-- INICIO_RELATORIO -->
 ## Introdução
 
-O presente relatório descreve o desenvolvimento de um relógio e alarme para o exame de suficiência de Sistemas Embarcados. O enunciado solicita o uso de Arduino e RTOS, exibição local de data e hora, ajuste por botão ou joystick, configuração de alarme e função soneca. O protótipo utiliza Arduino Mega 2560, LCD 1602A, joystick, botão, buzzer e LED. A operação ocorre pela interface física; o computador fornece alimentação e, durante o ajuste inicial, uma referência visual de horário. [Enunciado](documentos/Suficiencia_2026_2.pdf)
+O presente relatório descreve o desenvolvimento de um relógio e alarme para o exame de suficiência de Sistemas Embarcados. O enunciado solicita o uso de Arduino e RTOS, exibição local de data e hora, ajuste por botão ou joystick, configuração de alarme e função soneca. O protótipo utiliza Arduino Mega 2560, LCD 1602A, joystick, botão, buzzer e LED. A operação ocorre pela interface física, com ajuste de data e hora pelo joystick. Durante o funcionamento do protótipo, o computador é utilizado somente para fornecer alimentação. [Enunciado](documentos/Suficiencia_2026_2.pdf)
 
 A solução separa aquisição de entrada, controle do relógio, sinalização e apresentação. Cada tarefa possui uma responsabilidade, e a comunicação ocorre por eventos e cópias de estado em filas. O Timer1 fornece a contagem usada pelo calendário e pelos prazos de alarme; o watchdog mantém o tick do escalonador. Essa separação permite atualizar o LCD e navegar no menu enquanto o relógio continua avançando.
 
@@ -42,7 +42,7 @@ O clique curto em SEL abre o menu e, ao final, salva o conjunto editado. O movim
 A soneca admite de 1 a 10 minutos, com valor inicial de 5 minutos. Cada toque dura até 60 segundos. A repetição da soneca depende de novo acionamento enquanto o alarme toca; não existe repetição automática ilimitada. O encerramento por SEL longo mantém a habilitação diária, enquanto D5 durante a soneca também a desabilita.
 
 <p>
-<img src="fotos/01_relogio_referencia.jpg" width="230" alt="relogio referencia">
+<img src="fotos/01_relogio_referencia.jpg" width="230" alt="aferição do relógio para apresentação">
 <img src="fotos/02_alarme_habilitado.jpg" width="230" alt="alarme habilitado">
 </p>
 
@@ -265,7 +265,7 @@ Para separar esses efeitos, considera-se o erro de indicação `e(t)` e sua vari
 
 $$\mathrm{erro\ relativo\ (ppm)}=\frac{e(t_2)-e(t_1)}{t_2-t_1}\,10^6.$$
 
-A contagem em Timer1 evita atribuir ao calendário um segundo baseado apenas no watchdog, mas permanece vinculada ao oscilador principal. O ajuste de segundos permite alinhar melhor o instante inicial. A fotografia do protótipo mostra 08:00:02 no LCD e 08:00:03 na referência visual durante o ajuste; esse registro caracteriza o alinhamento inicial, sem estabelecer uma especificação de precisão de longo prazo.
+A contagem em Timer1 evita atribuir ao calendário um segundo baseado apenas no watchdog, mas permanece vinculada ao oscilador principal. O ajuste de segundos permite acertar o horário pela interface local. O registro fotográfico documenta a aferição para apresentação, uma conferência pontual independente da operação autônoma do relógio.
 
 Uma referência independente pode melhorar a manutenção do horário. A biblioteca `Arduino_RTC_Library` utiliza Timer2 assíncrono com cristal externo de 32,768 kHz, prescaler 128 e overflow de 256 contagens: nominalmente, `32768 / 128 / 256 = 1 Hz`. Essa solução requer o cristal e a ligação apropriada ao microcontrolador; instalar a biblioteca não acrescenta esse hardware à placa. Neste protótipo, também seria necessário transferir a geração de áudio para outra solução, pois `tone()` ocupa Timer2. [Arduino RTC: timer2.c](https://github.com/feilipu/Arduino_RTC_Library/blob/master/src/timer2.c)
 

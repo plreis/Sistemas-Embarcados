@@ -2,7 +2,7 @@
 
 Fotografias do autor recebidas no pacote WhatsApp de 08/10/2026. Arquivos preservados sem alteração de conteúdo.
 
-- [Relógio e referência visual](01_relogio_referencia.jpg)
+- [Aferição do relógio para apresentação](01_relogio_referencia.jpg)
 - [Alarme habilitado](02_alarme_habilitado.jpg)
 - [Edição de hora](03_edicao_hora.jpg)
 - [Edição de segundos](04_edicao_segundos.jpg)
