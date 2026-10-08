@@ -7,6 +7,8 @@ Professor Adalberto Lazarini — 8 de outubro de 2026
 
 [Relatório em PDF](relatorio/Relatorio.pdf) · [Projeto Overleaf](relatorio/Relatorio_Overleaf.zip) · [Sketch final](firmware/RelogioFinal/RelogioFinal.ino) · [Cabeçalho de tipos](firmware/RelogioFinal/RelogioTipos.h) · [Versões anteriores](versoes/README.md)
 
+[Slides e roteiro para a banca](apresentacao/README.md)
+
 <!-- INICIO_RELATORIO -->
 ## Introdução
 
