@@ -1,0 +1,72 @@
+%%% Relatorio Tecnico - Suficiencia Sistemas Embarcados - UTFPR
+\documentclass[12pt,a4paper,brazil]{article}
+\newcommand{\workingDate}{8 de outubro de 2026}
+\newcommand{\userName}{Embarcados}
+\newcommand{\institution}{UTFPR-AP}
+% Evita conflito com xcolor carregado primeiro pelo TikZ dentro do estilo original.
+\PassOptionsToPackage{usenames,dvipsnames}{xcolor}
+\usepackage{researchdiary_png}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows.meta,positioning}
+\pgfplotsset{compat=1.18}
+\graphicspath{{figuras/}}
+\hypersetup{hidelinks,pdftitle={Alarme e Relogio com FreeRTOS},pdfauthor={Pedro Lucas dos Reis Silva}}
+\setlength{\emergencystretch}{2em}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\lstdefinestyle{cpp}{
+    language=C++,
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{gray}\itshape,
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=5pt,
+    frame=single,
+    breaklines=true,
+    captionpos=b,
+    tabsize=2,
+    inputencoding=utf8,
+    extendedchars=true,
+    literate=
+        {á}{{\'a}}1 {à}{{\`a}}1 {â}{{\^a}}1 {ã}{{\~a}}1
+        {é}{{\'e}}1 {ê}{{\^e}}1
+        {í}{{\'i}}1
+        {ó}{{\'o}}1 {ô}{{\^o}}1 {õ}{{\~o}}1
+        {ú}{{\'u}}1
+        {ç}{{\c{c}}}1
+        {Á}{{\'A}}1 {À}{{\`A}}1 {Â}{{\^A}}1 {Ã}{{\~A}}1
+        {É}{{\'E}}1 {Ê}{{\^E}}1
+        {Í}{{\'I}}1
+        {Ó}{{\'O}}1 {Ô}{{\^O}}1 {Õ}{{\~O}}1
+        {Ú}{{\'U}}1
+        {Ç}{{\c{C}}}1
+}
+
+
+
+
+\begin{document}
+\begin{center}
+{\textbf{\LARGE Relógio e alarme com FreeRTOS}}\\[3mm]
+{\large Exame de Suficiência --- Sistemas Embarcados 2026.2}\\[3mm]
+Pedro Lucas dos Reis Silva --- RA 2272040\\
+Engenharia de Computação --- UTFPR Apucarana\\
+Professor Adalberto Lazarini\\[2mm]
+8 de outubro de 2026
+\end{center}
+\input{conteudo}
+\FloatBarrier
+\printbibliography[heading=bibnumbered,title={Referências}]
+\end{document}

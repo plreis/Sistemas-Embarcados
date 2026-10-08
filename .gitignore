@@ -1,0 +1,16 @@
+build/
+*.o
+*.elf
+*.hex
+*.eep
+*.map
+*.aux
+*.log
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.toc
+*.out
+*.fdb_latexmk
+*.fls

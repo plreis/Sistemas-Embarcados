@@ -1,0 +1,80 @@
+{
+  "ticks": {
+    "biblioteca": "FreeRTOS 11.1.0-3",
+    "arquivo": "FreeRTOSVariant.h",
+    "linhas": [
+      [
+        46,
+        48
+      ],
+      [
+        62,
+        63
+      ]
+    ],
+    "sha256_fonte": "afde8cf743bebd2cb2f7e32d4e32c65d3db255e10901981788a72ca7168ea3b6"
+  },
+  "milissegundos": {
+    "biblioteca": "FreeRTOS 11.1.0-3",
+    "arquivo": "projdefs.h",
+    "linhas": [
+      [
+        42,
+        42
+      ]
+    ],
+    "sha256_fonte": "05308062697b6093618d4b7110dbf125c5b4839072680d3b7239bc2644082347"
+  },
+  "periodicidade": {
+    "biblioteca": "FreeRTOS 11.1.0-3",
+    "arquivo": "tasks.c",
+    "linhas": [
+      [
+        2359,
+        2359
+      ],
+      [
+        2393,
+        2393
+      ],
+      [
+        2395,
+        2402
+      ]
+    ],
+    "sha256_fonte": "c74aa6310b3d62c237f8bbbc3ca45273dbd727068ef666c9f43621508f5f2fe9"
+  },
+  "sobrescrita": {
+    "biblioteca": "FreeRTOS 11.1.0-3",
+    "arquivo": "queue.h",
+    "linhas": [
+      [
+        597,
+        598
+      ]
+    ],
+    "sha256_fonte": "e8fc79b44313c9757ef69e94e0bbc6ebf087253ae312b675b736bb5dc4083daa"
+  },
+  "copia": {
+    "biblioteca": "FreeRTOS 11.1.0-3",
+    "arquivo": "queue.c",
+    "linhas": [
+      [
+        2427,
+        2427
+      ]
+    ],
+    "sha256_fonte": "6683880acbd994bc74fd0471ec0d2d83f70365ccc551b80b6593d33c636b5a8a"
+  },
+  "inicializacao": {
+    "biblioteca": "FreeRTOS 11.1.0-3",
+    "arquivo": "variantHooks.cpp",
+    "linhas": [
+      [
+        57,
+        58
+      ]
+    ],
+    "sha256_fonte": "737453a9166c8682b624bae9cb1443b85ce37a780af0fae312699598fb8d42a4"
+  }
+}
