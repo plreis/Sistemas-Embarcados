@@ -5,14 +5,14 @@ Engenharia de Computação — UTFPR Apucarana<br>
 Sistemas Embarcados — Exame de Suficiência 2026.2<br>
 Professor Adalberto Lazarini — 8 de outubro de 2026
 
-[Relatório em PDF](relatorio/Relatorio.pdf) · [Projeto Overleaf](relatorio/Relatorio_Overleaf.zip) · [Sketch final](firmware/RelogioFinal/RelogioFinal.ino) · [Cabeçalho de tipos](firmware/RelogioFinal/RelogioTipos.h) · [Versões anteriores](versoes/README.md)
+[Relatório em PDF](relatorio/Relatorio.pdf) · [Sketch final](firmware/RelogioFinal/RelogioFinal.ino) · [Cabeçalho de tipos](firmware/RelogioFinal/RelogioTipos.h) · [Versões anteriores](versoes/README.md)
 
-[Slides e roteiro para a banca](apresentacao/README.md)
+
 
 <!-- INICIO_RELATORIO -->
 ## Introdução
 
-O presente relatório descreve o desenvolvimento de um relógio e alarme para o exame de suficiência de Sistemas Embarcados. O enunciado solicita o uso de Arduino e RTOS, exibição local de data e hora, ajuste por botão ou joystick, configuração de alarme e função soneca. O protótipo utiliza Arduino Mega 2560, LCD 1602A, joystick, botão, buzzer e LED. A operação ocorre pela interface física, com ajuste de data e hora pelo joystick. Durante o funcionamento do protótipo, o computador é utilizado somente para fornecer alimentação. [Enunciado](documentos/Suficiencia_2026_2.pdf)
+O presente relatório descreve o desenvolvimento de um relógio e alarme para o exame de suficiência de Sistemas Embarcados. O enunciado solicita o uso de Arduino e RTOS, exibição local de data e hora, ajuste por botão ou joystick, configuração de alarme e função soneca. O protótipo utiliza Arduino Mega 2560, LCD 1602A, joystick, botão, buzzer e LED. A operação ocorre pela interface física, com ajuste de data e hora pelo joystick. Durante o funcionamento do protótipo, o computador é utilizado somente para fornecer alimentação. 
 
 A solução separa aquisição de entrada, controle do relógio, sinalização e apresentação. Cada tarefa possui uma responsabilidade, e a comunicação ocorre por eventos e cópias de estado em filas. O Timer1 fornece a contagem usada pelo calendário e pelos prazos de alarme; o watchdog mantém o tick do escalonador. Essa separação permite atualizar o LCD e navegar no menu enquanto o relógio continua avançando.
 
@@ -307,5 +307,3 @@ O firmware final contém somente `RelogioFinal.ino` e `RelogioTipos.h` na mesma 
 arduino-cli compile --fqbn arduino:avr:mega firmware/RelogioFinal
 python3 testes/executar.py
 ```
-
-O ZIP do relatório abre em `main.tex`, com **pdfLaTeX e Biber**. O código completo fica disponível separadamente, sem apêndice extenso no PDF.
